@@ -3,56 +3,42 @@
 <head>
 <meta charset="UTF-8">
 <title>Typing Master</title>
-
-<!-- CSS -->
 <link rel="stylesheet" href="style.css">
-
-<!-- Screenshot library -->
-<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
 </head>
 
 <body>
 
 <div class="container">
 
-    <h1>⚡ Typing Master</h1>
-    <p class="subtitle">Improve your speed. Beat your best score.</p>
-
-    <!-- Controls -->
-    <div class="controls">
-        <button onclick="setTime(30)">30s</button>
-        <button onclick="setTime(60)">60s</button>
-        <button onclick="toggleTheme()">🌙</button>
-        <button onclick="setTheme('neon')">Neon</button>
+    <div class="header">
+        <h1>⚡ Typing Master</h1>
+        <div class="controls">
+            <button onclick="setTime(30)">30s</button>
+            <button onclick="setTime(60)">60s</button>
+            <button onclick="toggleTheme()">🌙</button>
+        </div>
     </div>
 
-    <!-- Stats -->
-    <div class="stats">
-        <span>⏱ Time: <span id="time">30</span></span>
-        <span>⚡ WPM: <span id="wpm">0</span></span>
-        <span>🎯 Accuracy: <span id="accuracy">100</span>%</span>
+    <!-- PROGRESS BAR -->
+    <div class="progress-bar">
+        <div id="progress"></div>
     </div>
 
-    <!-- Text -->
-    <p id="text"></p>
+    <!-- STATS -->
+    <div class="stats-card">
+        <span>⏱ <span id="time">30</span>s</span>
+        <span>⚡ <span id="wpm">0</span> WPM</span>
+        <span>🎯 <span id="accuracy">100</span>%</span>
+    </div>
 
-    <!-- Input -->
+    <!-- TEXT -->
+    <div class="text-box" id="text"></div>
+
+    <!-- INPUT -->
     <textarea id="input" placeholder="Start typing..." oninput="handleTyping()"></textarea>
 
-    <!-- Result -->
-    <div id="result" class="hidden"></div>
-
-    <!-- Actions -->
-    <div class="actions">
-        <button onclick="shareScore()">📤 Share</button>
-        <button onclick="takeScreenshot()">📸 Screenshot</button>
-    </div>
-
-    <!-- Simple Login -->
-    <div class="login">
-        <input id="username" placeholder="Enter your name">
-        <button onclick="saveUser()">Save</button>
-    </div>
+    <!-- RESULT -->
+    <div id="result" class="result hidden"></div>
 
 </div>
 
