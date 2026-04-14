@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Typing Master</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Screenshot library -->
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⚡ Typing Master</h1>
+    <p class="subtitle">Improve your speed. Beat your best score.</p>
+
+    <!-- Controls -->
+    <div class="controls">
+        <button onclick="setTime(30)">30s</button>
+        <button onclick="setTime(60)">60s</button>
+        <button onclick="toggleTheme()">🌙</button>
+        <button onclick="setTheme('neon')">Neon</button>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats">
+        <span>⏱ Time: <span id="time">30</span></span>
+        <span>⚡ WPM: <span id="wpm">0</span></span>
+        <span>🎯 Accuracy: <span id="accuracy">100</span>%</span>
+    </div>
+
+    <!-- Text -->
+    <p id="text"></p>
+
+    <!-- Input -->
+    <textarea id="input" placeholder="Start typing..." oninput="handleTyping()"></textarea>
+
+    <!-- Result -->
+    <div id="result" class="hidden"></div>
+
+    <!-- Actions -->
+    <div class="actions">
+        <button onclick="shareScore()">📤 Share</button>
+        <button onclick="takeScreenshot()">📸 Screenshot</button>
+    </div>
+
+    <!-- Simple Login -->
+    <div class="login">
+        <input id="username" placeholder="Enter your name">
+        <button onclick="saveUser()">Save</button>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
